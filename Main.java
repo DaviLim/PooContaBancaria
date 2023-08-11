@@ -2,9 +2,10 @@ package exemplos;
 
 import java.util.Locale;
 
+
 public class Main {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
+    	Locale.setDefault(Locale.US);
         AgenciaBancaria agencia1 = new AgenciaBancaria();
         AgenciaBancaria agencia2 = new AgenciaBancaria();
         AgenciaBancaria agencia3 = new AgenciaBancaria();
@@ -38,7 +39,7 @@ public class Main {
         agencia3.adConta(conta9);
         
         
-
+        //Depósitos sem erro 
         agencia1.depositar(2, 100.0);
         System.out.printf("Saldo da conta: %.2f, pertecente: %s, na Agência: %d%n", conta2.getSaldo(),conta2.getNome(), agencia1.getnumAge());
         agencia1.depositar(3, 683.0);
@@ -80,7 +81,7 @@ public class Main {
         agencia3.depositar(1, 446.0);
         System.out.printf("Saldo da conta: %.2f, pertecente: %s, na Agência: %d%n", conta7.getSaldo(),conta7.getNome(), agencia3.getnumAge());
                 
-        
+        //Saques sem erro
         agencia1.sacar(3, 500.0);
         System.out.printf("Saldo da conta: %.2f, pertecente: %s, na Agência: %d%n", conta3.getSaldo(),conta3.getNome(), agencia1.getnumAge());
         agencia1.sacar(2, 131.0);
@@ -151,6 +152,12 @@ public class Main {
         agencia3.sacar(2, -10);
         agencia3.sacar(3, 50000);
         
+        
+        //Mostrar as contas das agências
+        agencia1.mostrar();
+        agencia2.mostrar();
+        agencia3.mostrar();
+
     }
     
 }

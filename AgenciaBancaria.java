@@ -20,7 +20,7 @@ public class AgenciaBancaria {
 
     public void adConta(ContaBancaria conta) {
         contas.add(conta);
-        //System.out.println("Conta adicionada com sucesso");
+        System.out.println("Conta adicionada com sucesso");
         
     }
 
@@ -57,5 +57,16 @@ public class AgenciaBancaria {
                 break; 
         }
     }
-}
+ }
+    public void mostrar() {
+        System.out.println("Lista de contas da Agência " + num + ":");
+        for (ContaBancaria conta : contas) {
+            System.out.println("Número da Conta: " + conta.getNum());
+            System.out.println("Nome do Titular: " + conta.getNome());
+            System.out.println("Saldo da Conta: " + conta.getSaldo());
+            System.out.println();
+            
+        }
+    }
+
 }
